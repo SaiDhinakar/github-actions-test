@@ -8,12 +8,16 @@ on:
 jobs:
   script-runner:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # This gives permission to push changes
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
