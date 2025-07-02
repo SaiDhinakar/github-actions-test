@@ -19,4 +19,4 @@ jobs:
 
       - name: Run python script
         run: |
-          python hello.py
+          python logs.py
