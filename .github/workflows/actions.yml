@@ -17,13 +17,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Run python script
         run: |
-          python -m pip install --upgrade pip
-          pip install flask
-
-      - name: Render Deployment
-        env:
-          RENDER_DEPLOY_TOKEN: ${{ secrets.RENDER_DEPLOY_TOKEN }}
-        run: |
-          curl "${RENDER_DEPLOY_TOKEN}"
+          python hello.py
