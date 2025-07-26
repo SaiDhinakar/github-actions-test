@@ -1,5 +1,6 @@
 todos = {}
 
+
 def add_todo(task):
     """Add a new todo item."""
     if task in todos:
@@ -8,6 +9,7 @@ def add_todo(task):
         todos[task] = False
         print(f"Todo '{task}' added.")
 
+
 def complete_todo(task):
     """Mark a todo item as completed."""
     if task in todos:
@@ -15,4 +17,3 @@ def complete_todo(task):
         print(f"Todo '{task}' marked as completed.")
     else:
         print(f"Todo '{task}' does not exist.")
-        
